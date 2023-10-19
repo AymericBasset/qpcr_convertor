@@ -17,7 +17,7 @@ def convert_to_numeric(value):
         return value
 
 # Streamlit app UI
-st.title("Excel QCPR Convertor App")
+st.title("Excel Western Blot Convertor App")
 uploaded_file = st.file_uploader("Upload an Excel file", type=["xlsx"])
 
 processed = False
