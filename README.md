@@ -1,1 +1,1 @@
-# qpcr_convertor
+# western_blot_convertor
