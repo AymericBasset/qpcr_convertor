@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import base64
 import io
+import xlsxwriter
 # buffer to use for excel writer
 buffer = io.BytesIO()
 
@@ -50,16 +51,16 @@ if uploaded_file:
         )
 
    
-        # download button 2 to download dataframe as xlsx
-        with pd.ExcelWriter(buffer, engine='xlsxwriter') as writer:
-            # Write each dataframe to a different worksheet.
-            df.to_excel(writer, sheet_name='Sheet1', index=False)
+        # # download button 2 to download dataframe as xlsx
+        # with pd.ExcelWriter(buffer, engine='xlsxwriter') as writer:
+        #     # Write each dataframe to a different worksheet.
+        #     df.to_excel(writer, sheet_name='Sheet1', index=False)
 
-            download2 = st.download_button(
-                label="Download data as Excel",
-                data=buffer,
-                file_name=name+'.xlsx',
-                mime='application/vnd.ms-excel'
-        )
+        #     download2 = st.download_button(
+        #         label="Download data as Excel",
+        #         data=buffer,
+        #         file_name=name+'.xlsx',
+        #         mime='application/vnd.ms-excel'
+        # )
 
     
